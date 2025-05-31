@@ -1,0 +1,119 @@
+.parentcontainer_for_project_intro {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(1,61,91);
+    margin: 0px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid;
+    border-top: rgb(170, 167, 167);
+}
+
+.parentcontainer_for_project_intro h3 {
+    height: 70px;
+    font-size: 30px;
+    color: white;
+    font-weight: normal;
+}
+
+.parentcontainer_for_project_intro p {
+    color: white;
+    font-size: 14px;
+}
+
+.parent_grid_projects {
+    background-color: rgb(170, 167, 167);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.grid_display {
+    display: grid;
+    grid-template-columns: 280px 280px;
+    grid-template-rows: 280px 280px;
+    margin-top: 40px;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 800px){
+    .grid_display {
+        grid-template-columns: 100%; 
+        grid-auto-rows: 300px;      
+        justify-items: center;      
+        gap: 20px;                  
+    }
+}
+
+
+.projects {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center; 
+    box-sizing: border-box;
+    border: 2px solid #aaa;
+    border-radius: 8px;  
+    padding: 0px;       
+    background-color: white;
+    width: 250px;            
+    height: 250px;  
+}
+
+
+.projectTitle {
+    font-size: 17px;
+    background-color: rgb(1,61,91);
+    width: 200px;
+    border-radius: 4px;
+    border: 2px solid rgb(1,61,91); 
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+    padding: 5px;
+}
+
+.projectTitle a {
+    text-decoration: none;
+}
+
+.projectTitle a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+
+.icons {
+    color: black;
+    font-size: 90px;
+    transition: transform 0.2s ease;
+}
+
+.iconsRPS {
+    color: black;
+    font-size: 75px;
+    transition: transform 0.2s ease;
+}
+
+.icons:hover,
+.iconsRPS:hover {
+    transform: scale(1.1);
+}
+
+a:visited,
+a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}

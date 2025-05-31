@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1> Simple Calculator </h1>
+    <div id="outercontainer">
+        <input id="displayresults" readonly>
+        <div id="rows">
+            <button onclick="pressbutton('7');"> 7</button>
+            <button onclick="pressbutton('8');"> 8</button>
+            <button onclick="pressbutton('9');"> 9</button>
+            <button onclick="pressbutton('/');"> &#x00F7;</button>
+        </div>
+        <div id="rows">
+            <button onclick="pressbutton('4');"> 4 </button>
+            <button onclick="pressbutton('5');"> 5</button>
+            <button onclick="pressbutton('6');"> 6 </button>
+            <button onclick="pressbutton('-');"> &#x2212; </button>
+        </div>
+        <div id="rows">
+            <button onclick="pressbutton('1');"> 1 </button>
+            <button onclick="pressbutton('2');"> 2 </button>
+            <button onclick="pressbutton('3');"> 3 </button>
+            <button onclick="pressbutton('+');">  &#x2b; </button>
+        </div>
+        <div id="rows">
+            <button onclick="resetresults();"> AC </button>
+            <button onclick="pressbutton('0');"> 0 </button>
+            <button onclick="pressbutton('.');"> . </button>
+            <button onclick="pressbutton('*');"> &#xD7; </button>
+        </div>
+        <div id="rows"> 
+            <button onclick="calculate();"> &#x3d; </button>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

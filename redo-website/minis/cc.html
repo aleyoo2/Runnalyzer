@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cc.css">
+    <script src="https://kit.fontawesome.com/31ab1c2216.js" crossorigin="anonymous"></script>
+    <title>Credit Card Chooser</title>
+</head>
+<body>
+    <h1 style="font-size: 45px;" class="parent_title">Credit Card Chooser </h1>
+    <div class="inspodiv">
+        <h3 style="font-size: 30px;">
+            Inspiration for Game 
+        </h3>
+        <p class="context">
+            My friends and I came up with a fun game to decide 
+            whose credit card to use whenever we went out to eat. 
+            Instead of arguing, we turned it into a game using Google’s 
+            random number generator. 
+        <p class="context">
+            The first person would generate a 
+            random number without setting any specific range—just letting Google decide. 
+            Then, each person after would use that number as the new max for their turn, 
+            generating a new random number between 1 and the previous result. 
+        </p>
+        <p class="context">
+            We’d repeat this process until someone hit 0—that person had to pay the bill. 
+            It added just enough suspense and randomness to make splitting dinner both fair 
+            and entertaining.
+        </p>
+        <div class="parent_cc_picture">
+            <img src="miniphotos/savor.jpg">
+        </div>
+    </div>
+
+    <div class="inspodiv2">
+        <h3 style="font-size: 30px;">
+            Minor Problems
+        </h3>
+        <div class="container">
+            <div class="issue">
+                <h4 style="font-size: 25px;">Problem 1</h4>
+                <img class="problem_photos" src="miniphotos/settings.png">
+                <p>
+                    Manual Update
+                </p>
+                <p>
+                    Since Google doesn't know our game rules, we had to manually update the maximum number in the range, which took some time
+                </p>
+            </div>
+            <div class="issue">
+                <h4 style="font-size: 25px;">Problem 2</h4>
+                <img class="problem_photos" src="miniphotos/steal.png">
+                <p>
+                    Subject to Inaccuracy 
+                </p>
+                <p>
+                    Because the process was manual, my friends would sometimes enter the wrong number—whether intentionally or not—resulting in an incorrect range
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="inspodiv4">
+        <h3 style="font-size: 30px; padding-top: 25px;">
+            How to Play 
+        </h3>
+        <ol class="lists">
+            <li id="items"> Decide who goes first and the order of sequence </li>
+            <li id="items"> First person inputs a number and then every person after randomizes the range by pressing 'Submit' </li>
+            <li id="items"> Repeat this process until the number hits 1. That person loses and pays using their Credit Card! </li>
+        </ol>
+    </div>
+
+    <div class="inspodiv3">
+        <h3 style="font-size: 30px;">
+            Play our Game!
+        </h3>
+
+        <input type="number" placeholder="enter any number!" id="input" class="inputnum"> <br>
+        <button id="submit" onclick="submitValue();"> Submit </button>
+        <button id="reset" onclick="resetValue();"> Reset </button>
+        <p id="results">Current Number</p>
+        <p id="series">Previous Values</p>
+      
+    </div>
+
+    <script src="cc.js"></script>
+</body>
+</html>

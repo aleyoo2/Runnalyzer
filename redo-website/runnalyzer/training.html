@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="runnalyzer.css">
+    <link rel="stylesheet" href="training.css">
+    <script src="https://kit.fontawesome.com/31ab1c2216.js" crossorigin="anonymous"></script></head>
+    <title>Training Analyzer</title>
+</head>
+
+<body>
+     <div id="parent_header">
+            <p id="title">RUNNALYZER</p>
+          
+            <ul id="tabs" style="list-style: none;">
+                <li><a class="links" href="runnalyzer.html">About</a></li>
+                <li><a class="links" href="training.html">Training Log</a></li>
+                <li><a class="links" href="race.html">Race Prep</a></li>
+            </ul>
+          
+            <div class="parentcontainer_for_navdropdown">
+                <div class="dropdown">
+                    <div class="dropdown-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                        <div class="contents">
+                            <a href="runnalyzer.html">About</a>
+                            <a href="training.html">Training Log</a>
+                            <a href="race.html">Race Prep</a>
+                        </div>
+                    </div>
+                </div>
+          </div>
+    </nav>
+    
+    <form>
+        <label for="distance">Enter Distance</label>
+        <input type="number" id="distance" placeholder="Distance in mile" required>
+        <br>
+        <label>Enter Pace</label>
+        <br>
+        <br>
+        <label for="minutes-select">Enter Minutes</label>
+        <select id="minutes-select" required>
+            <option value="">Minutes</option>
+        </select>
+        <label for="seconds-select">Enter Seconds</label>
+        <select id="seconds-select" required>
+            <option value="">Seconds</option>
+        </select>
+    </form>
+
+    <button id="submit" onclick="filterData();">Calculate</button>
+    <pre id="results"></pre>
+    <pre id="HRresults"></pre>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="runnalyzer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</body>
+
+</html>

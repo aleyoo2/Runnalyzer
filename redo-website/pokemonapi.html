@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="pokemonName" placeholder="Enter Pokemon Name">
+    <button id="fetchButton" onclick="fetchData();">Fetch Pokemon</button>
+    <button id="diffPic" onclick="diffPic();">Back</button>
+
+
+    <img src="" alt="Pokemon Image" id="pokemonImage" style="display: none;">
+
+
+    <script>
+        async function fetchData() {
+            const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+            const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                const output = await response.json();
+                const pokemonImage = output.sprites.front_default;
+                const imageElement = document.getElementById("pokemonImage");
+                imageElement.src = pokemonImage;
+                imageElement.style.display = "block";
+                imageElement.style.width = "220px";
+                imageElement.style.height = "220px";
+            }catch(error){
+                console.error(error);
+        }}
+
+        const pokemonName = document.getElementById("pokemonName");
+        pokemonName.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                fetchData();
+            }
+        });
+
+        async function diffPic() {
+            const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+            const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                const output = await response.json();
+                const pokemonImage = output.sprites.back_default;
+                const imageElement = document.getElementById("pokemonImage");
+                imageElement.src = pokemonImage;
+                imageElement.style.display = "block";
+                imageElement.style.width = "220px";
+                imageElement.style.height = "220px";
+            }catch(error){
+                console.error(error);
+        }}
+    
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> RPS Remake </title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="rockpaperscissor.css">
+    </head>
+    <body>
+        <div>
+            <h1 class="title">
+                Rock Paper Scissors 
+            </h1>
+        </div>
+        <div class="parentcontainer">
+            <button onclick="playgame('Rock')"> <img src="miniphotos/Rock.png"></button>
+            <button onclick="playgame('Paper')"> <img src="miniphotos/Paper.png"> </button>
+            <button onclick="playgame('Scissors')"> <img src="miniphotos/Scissors.png"> </button>
+            
+            <p class="displaytest"> Results </p>
+
+            <p class="score"> Score </p>
+
+            <button class="reset" onclick="resetscore()"> Reset Score </button>
+        </div>
+        
+        <script src="rockpaperscissor.js"> </script>
+    </body>
+</html>

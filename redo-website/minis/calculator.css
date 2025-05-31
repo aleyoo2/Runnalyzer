@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Optimist;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://www.capitalone.com/assets/enterprise/fonts/Optimist_W_Lt.eot);
+    src: url(https://www.capitalone.com/assets/enterprise/fonts/Optimist_W_Lt.eot?#iefix) format("embedded-opentype"),url(https://www.capitalone.com/assets/enterprise/fonts/Optimist_W_Lt.woff2) format("woff2"),url(https://www.capitalone.com/assets/enterprise/fonts/Optimist_W_Lt.woff) format("woff"),url(https://www.capitalone.com/assets/enterprise/fonts/Optimist_W_Lt.ttf) format("truetype")
+}
+body {
+    font-family: Optimist,Helvetica Neue,Helvetica,Arial,sans-serif;
+    margin: 0px;
+    background-color: rgb(247, 244, 240);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#outercontainer {
+    text-align: center;
+    position: relative;
+}
+
+button {
+    font-family: Optimist,Helvetica Neue,Helvetica,Arial,sans-serif;
+    width: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+p {
+    text-align: center;
+}
+
+input {
+    font-family: Optimist,Helvetica Neue,Helvetica,Arial,sans-serif;
+    text-align: end;
+    width: 130px;
+    margin-bottom: 8px;
+}
+
+#rows {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 9px;       
+    justify-content: center;
+}
+
