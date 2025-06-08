@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="runnalyzer.css">
+    <link rel="stylesheet" href="training.css">
+    <script src="https://kit.fontawesome.com/31ab1c2216.js" crossorigin="anonymous"></script></head>
+    <title>Training Analyzer</title>
+</head>
+
+<body>
+    <nav>
+        <div id="parent_header">
+            <p id="title">RUNNALYZER</p>
+          
+            <ul id="tabs" style="list-style: none;">
+                <li><a class="links" href="runnalyzer.html">About</a></li>
+                <li><a class="links" href="training.html">Training Log</a></li>
+                <li><a class="links" href="race.html">Race Prep</a></li>
+            </ul>
+          
+            <div class="parentcontainer_for_navdropdown">
+                <div class="dropdown">
+                    <div class="dropdown-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                        <div class="contents">
+                            <a href="runnalyzer.html">About</a>
+                            <a href="training.html">Training Log</a>
+                            <a href="race.html">Race Prep</a>
+                        </div>
+                    </div>
+                </div>
+          </div>
+
+          <div id="des-title">
+            <h3> What Do I Track When Training? </h3>
+          </div>
+    </nav>
+
+    
+
+    <div class="layout">
+        <div class="layout-title">
+            <p>State of the Art</p>
+            <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <div class="layout-content">
+            <ul class="reasons-for-data">
+                <li id="data-lists"><strong>Garmin Vivoactive 5:</strong> Tracks heart rate, pace, and VO₂ max to fine-tune long runs, tempo, and speed workouts with precision.</li>
+                <li id="data-lists"><strong>Shokz OpenFit 2:</strong> Delivers open-ear audio for motivation while keeping you aware of your surroundings during intense sessions.</li>
+                <li id="data-lists"><strong>Saucony Shoes:</strong> Different pairs support long runs, tempo, and speed work with the right mix of cushioning and responsiveness.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="randomSpace" style="height: 180px; background: linear-gradient(90deg, rgba(42, 123, 155, 1) 32%, rgba(23, 54, 30, 1) 77%); margin-top: 60px;">
+        <h3 id="howTitle">How Does Runnalyzer Work?</h3>
+    </div>
+    <div class="layout2">
+        <img class="diagram" src="diagram for runnalyzer.png">
+        <div class="logos-wrapper">
+            <img class="logos" src="google-sheets.png">
+            <img class="logos" src="chartjs.png">
+            <img class="logos" src="papaparse.png">
+        </div>
+    </div>
+
+    <div class="randomSpace" style="height: 180px; background: linear-gradient(90deg, rgba(42, 123, 155, 1) 32%, rgba(23, 54, 30, 1) 77%); margin-top: 60px;">
+        <h3 id="howTitle">How Does Runnalyzer Work?</h3>
+    </div>
+
+    <div id="ogContainer" class="test autoShow">
+        <div id="parentContainer">
+            <div id="parentContainerUser">
+                <div id="labelContainer">
+                    <label id="userTitle" for="form-inputs">User Input</label>
+                </div>
+                <div id="formContainer">
+                    <form id="form-inputs">
+                        <label class="labels" for="distance"><strong>Enter Distance</strong></label>
+                        <input class="labels" type="number" id="distance" placeholder="In Miles" required>
+                        <label class="labels"><strong>Enter Pace</strong></label>
+                        <label class="labels" for="minutes-select">Minutes:</label>
+                        <select id="minutes-select" required>
+                            <option value=""></option>
+                        </select>
+                        <label class="labels" for="seconds-select">Seconds:</label>
+                        <select id="seconds-select" required>
+                            <option value=""></option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div id="parentContainerOutput">
+                <div id="labelContainer">
+                    <label id="userTitle">Results</label>
+                </div>
+                <div id="display-outputs">
+                    <pre id="results" class="fade-target"></pre>
+                    <i id="icon1" class="fa-solid fa-square-poll-vertical"></i>
+                </div>
+                <div id="labelContainer">
+                    <label id="HRtitle" for="HRresults"> Heart Rates</label>
+                </div>
+                <div id="HRcontainer">
+                    <pre id="HRresults" class="fade-target"></pre>    
+                    <i id="icon2" class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div id="buttons">
+                    <button id="submit" onclick="filterData();">Filter Graph</button>
+                    <button id="clear" onclick="clearData();"> Clear Data</button>
+                </div>
+            </div>
+        </div>         
+    </div>
+    
+    <div id="chartBox">
+        <canvas id="myChart" width="600" height="400"></canvas>
+    </div>
+
+    <script src="runnalyzer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</body>
+
+</html>

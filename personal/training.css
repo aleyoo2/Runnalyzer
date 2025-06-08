@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Optimist,Helvetica Neue,Helvetica,Arial,sans-serif;
+    zoom: 125%;
+    background: #b6d5e3;
+    background: linear-gradient(90deg, rgba(182, 213, 227, 1) 15%, rgba(130, 130, 130, 1) 57%);
+    height: 2000px;
+}
+.randomSpace {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#howTitle {
+  font-weight: normal;
+  font-size: 33px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.diagram {
+  width: 900px;
+  height: auto;
+  display: block;
+  background-color: transparent;
+}
+
+.logos {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.5s ease, box-shadow 0.2s ease; 
+  padding: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.logos:hover {
+  transform: scale(1.03); 
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25); 
+  transition: transform 0.5s ease, box-shadow 0.2s ease; 
+}
+
+@media (max-width: 1000px) {
+  .diagram {
+    width: 100%; 
+  }
+  .logos {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.layout2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logos-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+
+
+#parent_header {
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+#ogContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;    /* adds space inside the top */
+  padding-bottom: 2rem; /* adds space inside the bottom */
+  margin-top: 300px;
+  margin-bottom: 100px;
+}
+
+.test.autoShow {
+  animation: text-appear 0.8s ease-out forwards;
+}
+
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+#parentContainer {
+  display: grid;
+  grid-template-columns: 300px 300px ;
+  text-align: center;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.2s ease; 
+}
+
+#parentContainer:hover {
+  transform: scale(1.03); 
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25); 
+}
+#parentContainerUser {
+  grid-column: 1; /* places it in the first column */
+  justify-self: start; /* aligns to the left within its grid cell */
+  
+}
+
+
+#parentContainerOutput {
+  grid-column: 2;
+  justify-self: center; /* or center/end based on your design */
+}
+
+#labelContainer {
+  text-align: center;
+}
+
+#userTitle,#HRtitle{
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+
+#form-inputs {
+  text-align: left;
+  background-color: #5ab8e0;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+
+#HRresults,#results {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0.5rem;
+  padding: 8px;
+  font-family: Optimist, Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+#results {
+  margin: 0px;
+}
+
+#distance {
+  font-size: 0.9rem;
+}
+
+#distance,
+#minutes-select,
+#seconds-select {
+  width: 100%;
+  max-width: 150px;
+  height: 2rem;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem;
+}
+
+.labels {
+  font-size: 1rem;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-evenly; /* Evenly distribute buttons */
+  align-items: center;
+  width: 100%;
+  margin-top: 20px; /* Optional spacing from above elements */
+  gap: 1rem; /* Optional for consistent gap if using space-between */
+}
+
+#submit, #clear {
+  border: none;
+  border-radius: 4px;
+  width: 95px;
+  height: 37px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.6s;
+}
+
+#submit:active, #clear:active {
+  transform: scale(0.97); /* Shrink slightly */
+  background-color: #888381; /* Change background color */
+  box-shadow: 0 2px 4px; /* Adjust shadow */
+}
+
+#submit:hover, #clear:hover {
+  opacity: 0.6;
+}
+
+#HRresults {
+  white-space: normal;
+  word-break: break-word;
+  max-width: 600px; 
+  margin: 0 auto;         
+  text-align: center;
+}
+
+
+#parentContainerOutput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+#chartBox {
+  height: 400px; /* or whatever fixed height you want */
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+
+#chartBox.fade-in {
+  opacity: 1;
+}
+
+
+canvas {
+  display: block;
+  width: 600px;
+  height: 400px;
+}
+
+
+
+@media (max-width: 600px) {
+  #chartBox {
+    max-width: 90vw;
+  }
+}
+
+#icon1, #icon2 {
+  font-size: 40px;
+}
